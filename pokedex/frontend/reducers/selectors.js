@@ -3,3 +3,8 @@
 export const selectAllPokemon = (state) => {
   return Object.values(state.entities.pokemon);
 };
+
+export const selectPokemonItems = (state, pokemon) => {
+  debugger
+  return pokemon.item_ids.map( id => state.entities.items[id])
+}
