@@ -5,7 +5,6 @@ import { selectPokemonItems } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
     let pokemon = state.entities.pokemon[ownProps.match.params.pokemonId]
-
     return {
         pokemon,
         items: selectPokemonItems(state, pokemon)
